@@ -1,0 +1,29 @@
+:root{
+    --primary-color: rgba(252,114,23,1);
+    --primary-color-hover: rgba(252,114,23,0.75);
+    --primary-color-disabled: rgba(252,114,23,0.25);
+}
+
+.text-primary{
+    color: var(--primary-color) !important;
+}
+
+.bg-primary{
+    background-color: var(--primary-color) !important;
+}
+
+.hr-primary{
+    background-color: var(--primary-color) !important;
+    opacity: 1 !important;
+    border: 0 !important;
+}
+
+.navbar-primary{
+    --bs-navbar-color: var(--primary-color);
+    --bs-navbar-hover-color: var(--primary-color-hover);
+    --bs-navbar-disabled-color: var(--primary-color-disabled);
+}
+
+.w-30{
+    width: 30%!important;
+}
