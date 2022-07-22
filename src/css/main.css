@@ -24,6 +24,22 @@
     --bs-navbar-disabled-color: var(--primary-color-disabled);
 }
 
+.s-heading-primary::after{
+    background-color: var(--primary-color) !important;
+    width: 5% !important;
+    height: 0.5vh !important;
+    content: "";
+    display: block !important;
+}
+
+.text-center .s-heading-primary::after{
+    margin: auto !important;
+}
+
+.text-end .s-heading-primary::after{
+    margin: auto 0 auto auto !important;
+}
+
 .w-30{
     width: 30%!important;
 }
