@@ -40,6 +40,20 @@
     margin: auto 0 auto auto !important;
 }
 
+.project-card .card-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.project-list{
+    height: 10vh;
+    overflow-y: auto;
+}
 .w-30{
     width: 30%!important;
 }
