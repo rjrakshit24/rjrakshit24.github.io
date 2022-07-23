@@ -17,6 +17,9 @@
     opacity: 1 !important;
     border: 0 !important;
 }
+.border-primary{
+    border-color: var(--primary-color) !important;
+}
 
 .navbar-primary{
     --bs-navbar-color: var(--primary-color);
@@ -54,6 +57,31 @@
     height: 70vh;
     overflow-y: auto;
 }
+
+.experience-card{
+    position: relative !important;
+}
+.experience-card .experience-body .experience-title{
+    font-size: 1.00rem !important;
+}
+.experience-card .experience-body .experience-org, .experience-card .experience-body .experience-loc, .experience-card .experience-body .experience-duration{
+    font-size: 0.85rem !important;
+}
+.experience-card .experience-body .experience-desc{
+    font-size: 0.85rem !important;
+}
 .w-30{
     width: 30%!important;
+}
+
+@media screen and (min-width: 991px){
+    .experience-card{
+        position: absolute !important;
+        left: 45% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+    .experience-section{
+        position: relative !important;
+        margin-left: 10vw !important;
+    }
 }
