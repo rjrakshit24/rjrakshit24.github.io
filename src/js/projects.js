@@ -31,7 +31,7 @@ function projectCard(projectTitle, projectDescription, projectTopics, projectLan
         
         if(element == 'live'){return;}
         var spanBadge = document.createElement('span');
-        spanBadge.className = 'badge rounded-pill text-bg-success opacity-75';
+        spanBadge.className = 'badge rounded-pill text-bg-success opacity-75 me-1';
         spanBadge.appendChild(document.createTextNode(element));
         cardBadges.appendChild(spanBadge);
     });
