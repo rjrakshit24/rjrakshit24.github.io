@@ -1,4 +1,4 @@
-function projectCard(projectTitle, projectDescription, projectTopics, projectLanguage){
+function projectCard(projectTitle, projectDescription, projectTopics, projectLanguage, projectURL){
     const cardParent = document.createElement('div');
     cardParent.className = 'col-12 my-2';
 
@@ -8,6 +8,9 @@ function projectCard(projectTitle, projectDescription, projectTopics, projectLan
     const cardBody = document.createElement('div');
     cardBody.className = 'card-body';
 
+    const anchorLink = document.createElement('a');
+    anchorLink.href = projectURL;
+    anchorLink.className = 'stretched-link text-decoration-none';
     const cardTitle = document.createElement('h5');
     cardTitle.className = 'card-title text-primary';
     var span = document.createElement('span');
@@ -19,7 +22,8 @@ function projectCard(projectTitle, projectDescription, projectTopics, projectLan
     span.className = 'fw-semibold';
     span.appendChild(document.createTextNode(projectTitle));
     cardTitle.appendChild(span);
-    cardBody.appendChild(cardTitle);
+    anchorLink.appendChild(cardTitle);
+    cardBody.appendChild(anchorLink);
 
     const cardDescription = document.createElement('p');
     cardDescription.className = 'card-text';
@@ -59,7 +63,7 @@ $.ajax({
         console.log(projectList);
         $(projectList).empty();
         console.log($(projectList))
-        data.filter(element => element.topics.includes('live')).forEach(element => {$(projectList).append(projectCard(element.name, element.description, element.topics, element.language));});
+        data.filter(element => element.topics.includes('live')).forEach(element => {$(projectList).append(projectCard(element.name, element.description, element.topics, element.language, element.html_url));});
         console.log($(projectList))
         //console.log(projectCard(data[0].name, data[0].description, data[0].topics, data[0].language));
     },
