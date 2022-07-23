@@ -26,7 +26,9 @@
     --bs-navbar-hover-color: var(--primary-color-hover);
     --bs-navbar-disabled-color: var(--primary-color-disabled);
 }
-
+.navbar .navbar-nav .nav-item .nav-link.active{
+    color: white !important;
+}
 .s-heading-primary::after{
     background-color: var(--primary-color) !important;
     width: 5% !important;
